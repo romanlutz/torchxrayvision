@@ -19,7 +19,6 @@ import sklearn, sklearn.model_selection
 import random
 import train_utils
 import torchxrayvision as xrv
-print(xrv.__dict__)
 
 
 parser = argparse.ArgumentParser()
