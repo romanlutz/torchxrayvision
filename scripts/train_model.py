@@ -19,6 +19,7 @@ import sklearn, sklearn.model_selection
 import random
 import train_utils
 import torchxrayvision as xrv
+print(xrv.__dict__)
 
 
 parser = argparse.ArgumentParser()
@@ -66,7 +67,7 @@ datas = []
 datas_names = []
 if "nih" in cfg.dataset:
     dataset = xrv.datasets.NIH_Dataset(
-        imgpath=cfg.dataset_dir + "/NIH/images-224", 
+        imgpath=cfg.dataset_dir + "/NIH", 
         transform=transforms, data_aug=data_aug, unique_patients=False)
     datas.append(dataset)
     datas_names.append("nih")
